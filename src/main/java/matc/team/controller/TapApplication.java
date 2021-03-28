@@ -1,7 +1,5 @@
 package matc.team.controller;
 
-import matc.team.controller.TapResults;
-
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 import java.util.HashSet;
