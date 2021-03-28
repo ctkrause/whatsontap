@@ -19,6 +19,16 @@ public class Tappers {
     public Tappers() {
     }
 
+
+    /**
+     * Instantiates a new Tappers.
+     *
+     * @param id the id
+     */
+    public Tappers(int id) {
+        this.id = id;
+    }
+
     /**
      * Instantiates a new Tappers.
      *
