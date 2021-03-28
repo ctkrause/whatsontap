@@ -32,4 +32,6 @@ public class TappersDao{
         return tappersList;
     }
 
+    // very helpful in doing all this
+    // https://www.codejava.net/java-ee/web-services/java-crud-restful-web-services-examples-with-jersey-and-tomcat
 }
