@@ -141,11 +141,11 @@ public class Tappers {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Tappers tappers = (Tappers) o;
-        return id == tappers.id && Objects.equals(name, tappers.name) && Objects.equals(brewery, tappers.brewery) && Objects.equals(restaurant, tappers.restaurant) && Objects.equals(notes, tappers.notes);
+        return id == tappers.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, brewery, restaurant, notes);
+        return Objects.hash(id);
     }
 }
