@@ -11,6 +11,7 @@ import java.util.List;
 public class TappersDao{
     private final Logger logger = LogManager.getLogger(this.getClass());
     private List<Tappers> tappersList = new ArrayList<Tappers>();
+    private static TappersDao instance;
 
     public TappersDao() {
         tappersList.add(new Tappers(1, "Test Beer", "Test Brewery", "Testaurant",
