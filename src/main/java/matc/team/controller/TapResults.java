@@ -17,6 +17,6 @@ public class TapResults {
     // The Java method will produce content identified by the MIME Media type "text/plain"
     @Produces(MediaType.APPLICATION_JSON)
     public List<Tappers> list() {
-
+        return dao.getAll();
     }
 }
