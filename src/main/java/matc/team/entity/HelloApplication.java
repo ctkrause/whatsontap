@@ -1,4 +1,4 @@
-package matc.team.tap;
+package matc.team.entity;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //Defines the base URI for all resource URIs.
-@ApplicationPath("/services") //You may want to add a value here so that all traffic isn't routed to the class below.
+@ApplicationPath("/whatsontap") //You may want to add a value here so that all traffic isn't routed to the class below.
 
 //The java class declares root resource and provider classes
 public class HelloApplication extends Application {
@@ -15,7 +15,7 @@ public class HelloApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(HelloWorld.class );
+        h.add(TapResults.class );
         return h;
     }
 }
