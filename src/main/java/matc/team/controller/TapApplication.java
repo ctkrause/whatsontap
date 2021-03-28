@@ -15,7 +15,7 @@ public class TapApplication extends Application {
     @Override
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
-        h.add(TapResults.class );
+        h.add(TapResource.class );
         return h;
     }
 }

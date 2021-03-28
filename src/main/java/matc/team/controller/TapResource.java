@@ -9,12 +9,11 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import java.util.List;
 
-@Path("/whatsontap")
-public class TapResults {
-    TappersDao dao = TappersDao.getInstance();
+@Path("/taps")
+public class TapResource {
+    TappersDao dao = new TappersDao();
     // The Java method will process HTTP GET requests
     @GET
-    // The Java method will produce content identified by the MIME Media type "text/plain"
     @Produces(MediaType.APPLICATION_JSON)
     public List<Tappers> list() {
         return dao.getAll();

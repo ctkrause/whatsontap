@@ -13,12 +13,6 @@ public class TappersDao{
     private List<Tappers> tappersList = new ArrayList<Tappers>();
     private static TappersDao instance;
 
-    public static TappersDao getInstance() {
-        if (instance == null) {
-            instance = new TappersDao();
-        }
-    }
-
     public TappersDao() {
         tappersList.add(new Tappers(1, "Test Beer", "Test Brewery", "Testaurant",
                 "This is a test"));
