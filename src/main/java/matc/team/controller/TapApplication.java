@@ -1,4 +1,6 @@
-package matc.team.entity;
+package matc.team.controller;
+
+import matc.team.controller.TapResults;
 
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;

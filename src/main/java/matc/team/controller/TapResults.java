@@ -1,4 +1,4 @@
-package matc.team.entity;
+package matc.team.controller;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
