@@ -7,6 +7,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="TeamProject_API_whatsontap" />
+        <module name="whatsontapmadison" />
       </profile>
     </annotationProcessing>
   </component>
