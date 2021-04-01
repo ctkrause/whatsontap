@@ -14,10 +14,10 @@ public class TappersDao{
     private static TappersDao instance;
 
     public TappersDao() {
-        tappersList.add(new Tappers(1, "Test Beer", "Test Brewery", "Testaurant",
-                "This is a test"));
-        tappersList.add(new Tappers(2, "Another Beer", "Test Brewery", "Testaurant",
-                "This is another test"));
+        /*
+        tappersList.add(new Tappers());
+        tappersList.add(new Tappers());
+        */
     }
 
     public Tappers getById(int id) {

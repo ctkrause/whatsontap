@@ -2,18 +2,35 @@ package matc.team.entity;
 
 import org.hibernate.annotations.GenericGenerator;
 import javax.persistence.*;
+import java.time.LocalDate;
 import java.util.*;
 
 /**
  * The type Tappers.
  */
+@Entity(name = "Tappers")
+@Table(name = "beers")
 public class Tappers {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO, generator = "native")
+    @GenericGenerator(name = "native", strategy = "native")
     private int id;
-    private String name;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "type_of_beer")
+    private String beerType;
+
+    @Column(name = "brewery")
     private String brewery;
+
+    @Column(name = "location")
     private String restaurant;
-    private String notes;
+
+    @Column(name = "date_on_tap")
+    private LocalDate dateOnTap;
 
     /**
      * Instantiates a new Tappers.
@@ -32,20 +49,19 @@ public class Tappers {
     }
 
     /**
-     * Instantiates a new Tappers.
-     *
-     * @param id         the id
-     * @param name       the name
-     * @param brewery    the brewery
-     * @param restaurant the restaurant
-     * @param notes      the notes
+     * Generates tappers
+     * @param description
+     * @param beerType
+     * @param brewery
+     * @param restaurant
+     * @param dateOnTap
      */
-    public Tappers(int id, String name, String brewery, String restaurant, String notes) {
-        this.id = id;
-        this.name = name;
+    public Tappers(String description, String beerType, String brewery, String restaurant, LocalDate dateOnTap) {
+        this.description = description;
+        this.beerType = beerType;
         this.brewery = brewery;
         this.restaurant = restaurant;
-        this.notes = notes;
+        this.dateOnTap = dateOnTap;
     }
 
     /**
@@ -66,22 +82,20 @@ public class Tappers {
         this.id = id;
     }
 
-    /**
-     * Gets name.
-     *
-     * @return the name
-     */
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    /**
-     * Sets name.
-     *
-     * @param name the name
-     */
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public String getBeerType() {
+        return beerType;
+    }
+
+    public void setBeerType(String beerType) {
+        this.beerType = beerType;
     }
 
     /**
@@ -120,22 +134,12 @@ public class Tappers {
         this.restaurant = restaurant;
     }
 
-    /**
-     * Gets notes.
-     *
-     * @return the notes
-     */
-    public String getNotes() {
-        return notes;
+    public LocalDate getDateOnTap() {
+        return dateOnTap;
     }
 
-    /**
-     * Sets notes.
-     *
-     * @param notes the notes
-     */
-    public void setNotes(String notes) {
-        this.notes = notes;
+    public void setDateOnTap(LocalDate dateOnTap) {
+        this.dateOnTap = dateOnTap;
     }
 
     @Override
