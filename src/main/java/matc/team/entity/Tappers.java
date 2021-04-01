@@ -1,6 +1,8 @@
 package matc.team.entity;
 
-import java.util.Objects;
+import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.*;
+import java.util.*;
 
 /**
  * The type Tappers.
