@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="TeamProject_API_whatsontap" />
         <module name="whatsontapmadison" />
+        <module name="whatsontap" />
       </profile>
     </annotationProcessing>
   </component>
