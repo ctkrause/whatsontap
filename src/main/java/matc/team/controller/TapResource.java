@@ -62,4 +62,16 @@ public class TapResource {
             return Response.notModified().build();
         }
     }
+
+    @DELETE
+    @Path("{id}")
+    public Response delete(@PathParam("id") int id) {
+        Tappers tapper = dao.getById(id);
+        dao.delete(tapper);
+        if (dao.getAll().contains(tapper)) {
+            return Response.notModified().build();
+        } else {
+            return Response.ok().build();
+        }
+    }
 }
