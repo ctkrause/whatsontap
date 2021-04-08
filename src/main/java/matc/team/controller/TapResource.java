@@ -21,7 +21,7 @@ public class TapResource {
     }
 
     @GET
-    @Path("{id}")
+    @Path("/id/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response get(@PathParam("id") int id) {
         Tappers tappers = dao.getById(id);
@@ -32,11 +32,18 @@ public class TapResource {
         }
     }
 
+    /**
+     * Adds a beer to the database from parameters
+     *
+     * @param tapper beer to be added
+     * @return response showing results of adding
+     * @throws URISyntaxException Bad syntax
+     */
     @POST
     @Consumes(MediaType.APPLICATION_JSON)
     public Response add(Tappers tapper) throws URISyntaxException {
         int newTappersId = dao.insert(tapper);
-        URI uri = new URI("/taps/" + newTappersId);
+        URI uri = new URI("/taps/id/" + newTappersId);
         return Response.created(uri).build();
     }
 }
