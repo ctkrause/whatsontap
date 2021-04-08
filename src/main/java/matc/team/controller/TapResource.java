@@ -53,6 +53,13 @@ public class TapResource {
     public Response update(@PathParam("id") int id, Tappers tapper) {
         tapper.setId(id);
         dao.saveOrUpdate(tapper);
-        return Response.ok().build();
+
+        Tappers updatedTapper = dao.getById(id);
+
+        if (tapper.equals(updatedTapper)) {
+            return Response.ok().build();
+        } else {
+            return Response.notModified().build();
+        }
     }
 }
