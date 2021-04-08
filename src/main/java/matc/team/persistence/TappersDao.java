@@ -40,7 +40,9 @@ public class TappersDao{
 
     public void saveOrUpdate(Tappers tapper) {
         Session session = getSession();
+        Transaction transaction = session.beginTransaction();
         session.saveOrUpdate(tapper);
+        transaction.commit();
         session.close();
     }
 
