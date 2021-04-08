@@ -12,6 +12,8 @@ import java.util.List;
 
 @Path("/taps")
 public class TapResource {
+
+
     TappersDao dao = new TappersDao();
     // The Java method will process HTTP GET requests
     @GET
@@ -20,6 +22,12 @@ public class TapResource {
         return dao.getAll();
     }
 
+    /**
+     * Gets specific record based on id
+     *
+     * @param id id of beer being retrieved
+     * @return status based on result of get
+     */
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -47,6 +55,13 @@ public class TapResource {
         return Response.created(uri).build();
     }
 
+    /**
+     * updates a record
+     *
+     * @param id id of the beer being updated
+     * @param tapper new beer information
+     * @return status based on result of update
+     */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("{id}")
@@ -63,6 +78,12 @@ public class TapResource {
         }
     }
 
+    /**
+     * Deletes a record with a specified id
+     *
+     * @param id ID of item to be deleted
+     * @return status based on result of delete
+     */
     @DELETE
     @Path("{id}")
     public Response delete(@PathParam("id") int id) {
