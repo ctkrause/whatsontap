@@ -17,12 +17,14 @@ public class Tappers {
     @GenericGenerator(name = "native", strategy = "native")
     private int id;
 
+    // might not need annotation - same name
     @Column(name = "description")
     private String description;
 
     @Column(name = "type_of_beer")
     private String beerType;
 
+    // also might not need annotation?
     @Column(name = "brewery")
     private String brewery;
 
@@ -30,7 +32,7 @@ public class Tappers {
     private String restaurant;
 
     @Column(name = "date_on_tap")
-    private LocalDate dateOnTap;
+    private String dateOnTap;
 
     /**
      * Instantiates a new Tappers.
@@ -56,7 +58,7 @@ public class Tappers {
      * @param restaurant
      * @param dateOnTap
      */
-    public Tappers(String description, String beerType, String brewery, String restaurant, LocalDate dateOnTap) {
+    public Tappers(String description, String beerType, String brewery, String restaurant, String dateOnTap) {
         this.description = description;
         this.beerType = beerType;
         this.brewery = brewery;
@@ -134,11 +136,11 @@ public class Tappers {
         this.restaurant = restaurant;
     }
 
-    public LocalDate getDateOnTap() {
+    public String getDateOnTap() {
         return dateOnTap;
     }
 
-    public void setDateOnTap(LocalDate dateOnTap) {
+    public void setDateOnTap(String dateOnTap) {
         this.dateOnTap = dateOnTap;
     }
 
