@@ -10,6 +10,11 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
 
+/**
+ * Main API for REST
+ *
+ * Returns all data in JSON
+ */
 @Path("/taps")
 public class TapResource {
 
