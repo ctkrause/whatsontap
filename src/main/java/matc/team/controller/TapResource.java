@@ -15,7 +15,11 @@ public class TapResource {
 
 
     TappersDao dao = new TappersDao();
-    // The Java method will process HTTP GET requests
+
+    /**
+     * Gets all records
+     * @return all beers
+     */
     @GET
     @Produces(MediaType.APPLICATION_JSON)
     public List<Tappers> getAll() {
@@ -40,6 +44,11 @@ public class TapResource {
         }
     }
 
+    /**
+     * Gets all records with a specified description
+     * @param description description of beer (name)
+     * @return beers containing description
+     */
     @GET
     @Path("/desc/{description}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -52,6 +61,11 @@ public class TapResource {
         }
     }
 
+    /**
+     * Gets all records of a beer type
+     * @param type type of beer being queried
+     * @return records of beer of specified type
+     */
     @GET
     @Path("/type/{type}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -64,6 +78,11 @@ public class TapResource {
         }
     }
 
+    /**
+     * Gets all records for a brewery
+     * @param brewery brewery being queried
+     * @return records with brewery
+     */
     @GET
     @Path("/brewery/{brewery}")
     @Produces(MediaType.APPLICATION_JSON)
@@ -76,6 +95,11 @@ public class TapResource {
         }
     }
 
+    /**
+     * Gets all records for a restaurant
+     * @param restaurant restaurant being queried
+     * @return records with restaurant
+     */
     @GET
     @Path("/restaurant/{restaurant}")
     @Produces(MediaType.APPLICATION_JSON)
