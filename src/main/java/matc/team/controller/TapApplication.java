@@ -16,7 +16,7 @@ public class TapApplication extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(TapResource.class );
-        h.add(TapResourceXML.class);
+        //h.add(TapResourceXML.class); can't get this working right so right now disabling
         return h;
     }
 }
