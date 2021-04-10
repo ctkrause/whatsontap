@@ -18,7 +18,7 @@ public class TapResource {
     // The Java method will process HTTP GET requests
     @GET
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Tappers> list() {
+    public List<Tappers> getAll() {
         return dao.getAll();
     }
 
@@ -31,7 +31,7 @@ public class TapResource {
     @GET
     @Path("{id}")
     @Produces(MediaType.APPLICATION_JSON)
-    public Response get(@PathParam("id") int id) {
+    public Response getById(@PathParam("id") int id) {
         Tappers tappers = dao.getById(id);
         if (tappers != null) {
             return Response.ok(tappers, MediaType.APPLICATION_JSON).build();
