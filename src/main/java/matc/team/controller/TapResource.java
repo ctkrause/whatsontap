@@ -29,10 +29,34 @@ public class TapResource {
      * @return status based on result of get
      */
     @GET
-    @Path("{id}")
+    @Path("/id/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getById(@PathParam("id") int id) {
         Tappers tappers = dao.getById(id);
+        if (tappers != null) {
+            return Response.ok(tappers, MediaType.APPLICATION_JSON).build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
+
+    @GET
+    @Path("/desc/{description}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByDescription(@PathParam("description") String description) {
+        List<Tappers> tappers = dao.getByPropertyLike("description", description);
+        if (tappers != null) {
+            return Response.ok(tappers, MediaType.APPLICATION_JSON).build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
+
+    @GET
+    @Path("/type/{type}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByType(@PathParam("type") String type) {
+        List<Tappers> tappers = dao.getByPropertyLike("beerType", type);
         if (tappers != null) {
             return Response.ok(tappers, MediaType.APPLICATION_JSON).build();
         } else {
