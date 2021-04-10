@@ -16,6 +16,7 @@ public class TapApplication extends Application {
     public Set<Class<?>> getClasses() {
         HashSet h = new HashSet<Class<?>>();
         h.add(TapResource.class );
+        h.add(TapResourceXML.class);
         return h;
     }
 }
