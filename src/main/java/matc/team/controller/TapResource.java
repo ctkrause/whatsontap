@@ -141,7 +141,7 @@ public class TapResource {
      */
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
-    @Path("{id}")
+    @Path("/id/{id}")
     public Response update(@PathParam("id") int id, Tappers tapper) {
         tapper.setId(id);
         dao.saveOrUpdate(tapper);
@@ -162,7 +162,7 @@ public class TapResource {
      * @return status based on result of delete
      */
     @DELETE
-    @Path("{id}")
+    @Path("/id/{id}")
     public Response delete(@PathParam("id") int id) {
         Tappers tapper = dao.getById(id);
 
