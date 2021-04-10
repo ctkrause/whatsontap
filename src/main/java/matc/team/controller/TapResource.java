@@ -64,6 +64,30 @@ public class TapResource {
         }
     }
 
+    @GET
+    @Path("/brewery/{brewery}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByBrewery(@PathParam("brewery") String brewery) {
+        List<Tappers> tappers = dao.getByPropertyLike("brewery", brewery);
+        if (tappers != null) {
+            return Response.ok(tappers, MediaType.APPLICATION_JSON).build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
+
+    @GET
+    @Path("/restaurant/{restaurant}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getByRestaurant(@PathParam("restaurant") String restaurant) {
+        List<Tappers> tappers = dao.getByPropertyLike("restaurant", restaurant);
+        if (tappers != null) {
+            return Response.ok(tappers, MediaType.APPLICATION_JSON).build();
+        } else {
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+    }
+
     /**
      * Adds a beer to the database from parameters
      *
