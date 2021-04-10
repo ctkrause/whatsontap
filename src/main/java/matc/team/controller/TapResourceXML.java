@@ -11,7 +11,7 @@ import java.util.List;
 /**
  * Gives results in XML instead of JSON
  */
-@Path("/tapsXML")
+@Path("/tapsxml")
 public class TapResourceXML {
 
     TappersDao dao = new TappersDao();
