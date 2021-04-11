@@ -18,8 +18,11 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 class TapResourceTest {
+    /**
+    TODO: Decide if still needed?
+
     private TapResource tapResource;
-    private static final String baseURI = "http://3.141.155.98:8080/madisonontap/whatsontap/taps";
+    private static final String baseURI = "http://localhost:8080/whatsontap_war/whatsontap/taps";
 
     static WebTarget getWebTarget() {
         ClientConfig config = new ClientConfig();
@@ -42,7 +45,7 @@ class TapResourceTest {
         assertEquals(10, tappersList.size());
     }
 
-    @Test
+     @Test
     void getTest() {
         WebTarget target = getWebTarget();
         String tapperId = "3";
@@ -63,12 +66,13 @@ class TapResourceTest {
         System.out.println(response.getLocation().toString());
     }
 
+
     @Test
     void updateTest() {
         WebTarget target = getWebTarget();
-        Tappers tappers = new Tappers("beer", "beer", "beer", "beer", "04/01/2021");
+        Tappers tappers = new Tappers("Edmund Fitzgerald", "Porter", "Great Lakes", "The Harmony", "03/31/2021");
 
-        String tapperId = "13";
+        String tapperId = "9";
         Response response = target.path(tapperId).request()
                 .put(Entity.entity(tappers, MediaType.APPLICATION_JSON), Response.class);
         System.out.println(response);
@@ -77,9 +81,10 @@ class TapResourceTest {
     @Test
     void deleteTest() {
         WebTarget target = getWebTarget();
-        String tapperId = "16";
+        String tapperId = "8";
         Response response = target.path(tapperId).request()
                 .delete(Response.class);
         System.out.println(response);
-    }
+    } */
+
 }

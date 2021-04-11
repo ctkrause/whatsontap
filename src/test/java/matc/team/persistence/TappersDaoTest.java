@@ -61,4 +61,11 @@ class TappersDaoTest {
         assertEquals(2, retrievedTappers.size());
     }
 
+    @Test
+    void saveOrUpdate() {
+        Tappers tapToChange = tappersDao.getById(9);
+        tapToChange.setDescription("Chocolate Lab");
+        tappersDao.saveOrUpdate(tapToChange);
+        assertEquals("Chocolate Lab", tapToChange.getDescription());
+    }
 }

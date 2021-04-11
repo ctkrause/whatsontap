@@ -17,15 +17,101 @@
 <body>
 <div class="container p-4">
     <div class="jumbotron text-center p-2">
-        <h1 class="display-1">What's On Tap</h1>
-        <p class="lead">The /whatsontap API for searching and updating beers on tap at restaurants in Madison, Wisconsin</p>
+        <h1 class="display-1">Madison On Tap</h1>
+        <p class="lead">The API for searching and updating beers on tap at restaurants in the Atwood area of Madison, Wisconsin</p>
     </div>
 
-    <div class="container text-center mt-4">
-        <h2>Methods</h2>
-        <p>
-            Documentation stuff will be going here!
-        </p>
+    <div class="container">
+        <table class="table table-bordered table-hover caption-top">
+            <caption class="text-dark">Get All</caption>
+            <tr>
+                <th>Method</th>
+                <th>Endpoints</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/taps/</td>
+                <td>Retrieve all tap listings</td>
+                <td>Returns all tap listings: <a href="http://3.141.155.98:8080/madisonontap/whatsontap/taps">
+                    http://3.141.155.98:8080/madisonontap/whatsontap/taps</a></td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered table-hover caption-top">
+            <caption class="text-dark">Get By ID</caption>
+            <tr>
+                <th>Method</th>
+                <th>Endpoints</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>GET</td>
+                <td>/taps/id/{id}</td>
+                <td>Retrieve specific tap listing by ID</td>
+                <td>Returns the listing with an ID of 1: <a href="http://3.141.155.98:8080/madisonontap/whatsontap/taps/id/1">
+                    http://3.141.155.98:8080/madisonontap/whatsontap/taps/id/1</a></td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered table-hover caption-top">
+            <caption class="text-dark">Add New Tap</caption>
+            <tr>
+                <th>Method</th>
+                <th>Endpoints</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>POST</td>
+                <td>/taps/</td>
+                <td>Add new tap listing to MadisonOnTap database</td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered table-hover caption-top">
+            <caption class="text-dark">Update Tap</caption>
+            <tr>
+                <th>Method</th>
+                <th>Endpoints</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>PUT</td>
+                <td>/taps/</td>
+                <td>Updates the contents of an existing tap listing</td>
+            </tr>
+        </table>
+
+        <table class="table table-bordered table-hover caption-top">
+            <caption class="text-dark">Delete Tap</caption>
+            <tr>
+                <th>Method</th>
+                <th>Endpoints</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>DELETE</td>
+                <td>/taps/id/{id}</td>
+                <td>Delete specific tap listing by ID</td>
+                <td>URL to delete the listing with an ID of 1: <a href="http://3.141.155.98:8080/madisonontap/whatsontap/taps/id/1">
+                    http://3.141.155.98:8080/madisonontap/whatsontap/taps/id/1</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container text-center m-4">
+        <h2 class="p-2">Links for Complete Documentation and GitHub:</h2>
+            <div class="btn btn-success p-2 m-1">
+                <a href="https://app.swaggerhub.com/apis-docs/madisonontap/madisonontap/1.0.0" class="text-decoration-none text-white">
+                    Documentation</a>
+            </div>
+
+            <div class="btn btn-success text-decoration-none text-white p-2 m-1">
+                <a href="https://github.com/ctkrause/whatsontap" class="text-decoration-none text-white">GitHub</a>
+            </div>
     </div>
 </div>
 </body>
