@@ -1,12 +1,24 @@
 # Week One (3/22/2021 - 3/28/2021)
-- 2021-03-23 - 1hr - first session, got discord information, agreed on meeting times
-- 2021-03-27 - 2hrs - project setup, non api stuff put together, documentation
-- 2021-03-28 - 1 hr - got REST working for hard coded GET data, JSON
+- 03/23/2021 - 1 hr - first session, got discord information, agreed on meeting times. (Team)
+- 03/27/2021 - 2 hrs - project setup, non api stuff put together, documentation. (Team)
+- 03/28/2021 - 1 hr - got REST working for hard coded GET data, JSON. (Team)
 
 # Week Two (3/29/2021 - 4/4/2021)
-
+- 03/29/2021 - 2 hours - Created database and configured AWS. (Caleb) 
+- 04/1/2021 - 30 min - Hibernate annotations for main entity. (James)
+- 04/2/2021 - 30 min - Adding MySql database to AWS EC2. (Caleb)  
+- 04/3/2021 - 2 hrs - Created and implemented DAO and began writing unit tests. (Alivia)
 
 # Week Three (4/5/2021 - 4/11/2021)
-
+- 04/8/2021 - 3 hrs - Test database creation, configuration for hibernate, running tests, and mysql nonsense. (Alivia)
+- 04/8/2021 - 2.75 hours - Set up CRUD methods for API. (James)  
+- 04/9/2021 - 1 hour - Team meeting (Team)  
+- 04/9/2021 - 2.5 hrs - Unit testing troubleshooting, testing, etc. (Alivia)
+- 04/10/2021 - 2 hours - Started documentation on swagger.io (Caleb)  
+- 04/11/2021 - 3 hrs - Meeting to discuss front end, documentation, etcetera. (Team)
+- 04/11/2021 - 2 hrs - Developing front end/landing page. (Alivia)
 
 # Week Four (4/12/2021 - 4/13/2021)
+- 04/12/2021 - 1 hr - Checking unit testing on vm and resolving time zone issues yet again for mysql. (Caleb)
+- 04/13/2021 - 2 hr - Deploying newest WAR to AWS, testing, cleaning up documentation. (Caleb)
+- 04/13/2021 - 1 hr - Final pow wow before presentation. Final deployment and testing (Team)
