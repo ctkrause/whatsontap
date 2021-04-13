@@ -13,7 +13,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * This class creates a connection to a test database for the cribbage UserDaoTest
+ * This class creates a connection to a test database for the what's on tap api
  *
  */
 public class Database {
